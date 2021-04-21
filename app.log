@@ -1,0 +1,6 @@
+2021-04-22 00:16:04,743 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-04-22 00:16:28,038 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-04-22 00:17:48,634 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-04-22 00:18:01,334 INFO werkzeug 127.0.0.1 - - [22/Apr/2021 00:18:01] "[33mGET / HTTP/1.1[0m" 404 -
+2021-04-22 00:18:01,434 INFO werkzeug 127.0.0.1 - - [22/Apr/2021 00:18:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-22 00:18:06,212 INFO werkzeug 127.0.0.1 - - [22/Apr/2021 00:18:06] "[31m[1mGET /post HTTP/1.1[0m" 405 -
