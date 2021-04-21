@@ -24,7 +24,7 @@ def main():
         }
     }
     handle_dialog(response, request.json)
-    logging.info('Request: %r', response)
+    logging.info('Response: %r', response)
     return json.dumps(response)
 
 
@@ -36,10 +36,10 @@ def handle_dialog(res, req):
         return
     # Получаем города из нашего
     cities = get_cities(req)
-    print(cities)
     if not cities:
         res['response']['text'] = 'Вы не написали название ни одного города!'
     elif len(cities) == 1:
+
         res['response']['text'] = 'Этот город в стране - ' + \
                                   get_country(cities[0])
     elif len(cities) == 2:

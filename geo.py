@@ -1,7 +1,6 @@
 import math
 import requests
 
-
 def get_coordinates(city_name):
     try:
         # url, по которому доступно API Яндекс.Карт
@@ -10,6 +9,7 @@ def get_coordinates(city_name):
         params = {
             # город, координаты которого мы ищем
             'geocode': city_name,
+            "apikey": "40d1649f-0493-4b70-98ba-98533de7710b",
             # формат ответа от сервера, в данном случае JSON
             'format': 'json'
         }
@@ -38,6 +38,7 @@ def get_country(city_name):
         url = "https://geocode-maps.yandex.ru/1.x/"
         params = {
             'geocode': city_name,
+            "apikey": "40d1649f-0493-4b70-98ba-98533de7710b",
             'format': 'json'
         }
         data = requests.get(url, params).json()
