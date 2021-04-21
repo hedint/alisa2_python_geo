@@ -1,8 +1,5 @@
 import math
 import requests
-import logging
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s %(levelname)s %(name)s %(message)s')
 def get_coordinates(city_name):
     try:
         # url, по которому доступно API Яндекс.Карт
@@ -19,7 +16,6 @@ def get_coordinates(city_name):
         response = requests.get(url, params)
         # получаем JSON ответа
         json = response.json()
-        logging.info(json)
         # получаем координаты города (там написаны долгота(longitude),
         # широта(latitude) через пробел).
         # Посмотреть подробное описание JSON-ответа можно
@@ -45,7 +41,6 @@ def get_country(city_name):
             'format': 'json'
         }
         data = requests.get(url, params).json()
-        logging.info(data)
         # все отличие тут, мы получаем имя страны
         return data['response']['GeoObjectCollection']['featureMember'][0][
             'GeoObject']['metaDataProperty']['GeocoderMetaData'][
