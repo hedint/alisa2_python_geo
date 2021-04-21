@@ -36,6 +36,7 @@ def handle_dialog(res, req):
         return
     # Получаем города из нашего
     cities = get_cities(req)
+    print(cities)
     if not cities:
         res['response']['text'] = 'Вы не написали название ни одного города!'
     elif len(cities) == 1:
