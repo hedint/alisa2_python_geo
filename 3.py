@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # Добавляем логирование в файл. Чтобы найти файл,
 # перейдите на pythonwhere в раздел files, он лежит в корневой папке
-logging.basicConfig(level=logging.INFO, filename='app.log',
+logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(levelname)s %(name)s %(message)s')
 
 
